@@ -14,6 +14,7 @@ streamlit.text('ping')
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
 # pick fruits
+my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.multiselect("Pick your poisons", list(my_fruit_list.index))
 
 # display list
