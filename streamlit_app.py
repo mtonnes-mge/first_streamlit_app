@@ -53,3 +53,6 @@ my_cur.execute('select * from "PC_RIVERY_DB"."PUBLIC"."FRUIT_LOAD_LIST"')
 # streamlit.text(my_data_row)
 my_data_rows = my_cur.fetchall()
 streamlit.dataframe(my_data_rows)
+
+new_fruit = streamlit.text_input('Add another fruit:')
+streamlit.write('You added ', new_fruit)
