@@ -11,7 +11,7 @@ streamlit.text('bar')
 streamlit.text('baz')
 
 streamlit.header('Contact')
-streamlit.text('ping v1')
+streamlit.text('ping v2')
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
