@@ -49,6 +49,5 @@ streamlit.text(my_data_row)
 
 my_cur.execute('select * from "PC_RIVERY_DB"."PUBLIC"."FRUIT_LOAD_LIST"')
 my_data_row = my_cur.fetchone()
-streamlist.text("The fruit list:")
-streamlist.text(my_data_row)
-
+streamlit.text("The fruit list:")
+streamlit.text(my_data_row)
