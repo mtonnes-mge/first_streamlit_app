@@ -54,7 +54,7 @@ if streamlit.button("Get fruit load list"):
 # input fruit
 def insert_fruit(fruit):
   with my_cnx.cursor() as my_cur:
-    my_cur.execute("INSERT INTO FRUIT_LOAD_LIST (FRUIT_NAME) VALUES ('"+new_fruit+"')") # great sql injection
+    my_cur.execute("INSERT INTO FRUIT_LOAD_LIST (FRUIT_NAME) VALUES ('"+fruit+"')") # great sql injection
 
 fruit_to_add = streamlit.text_input('Add another fruit:')
 if streamlit.button("Add fruit!"):
