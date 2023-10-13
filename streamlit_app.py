@@ -48,11 +48,12 @@ my_data_row = my_cur.fetchone()
 streamlit.text(my_data_row)
 
 streamlit.text("The fruit list:")
-my_cur.execute('select * from "PC_RIVERY_DB"."PUBLIC"."FRUIT_LOAD_LIST"')
+my_cur.execute("select * from FRUIT_LOAD_LIST")
 # my_data_row = my_cur.fetchone()
 # streamlit.text(my_data_row)
 my_data_rows = my_cur.fetchall()
 streamlit.dataframe(my_data_rows)
 
 new_fruit = streamlit.text_input('Add another fruit:')
+my_cur.execute("INSERT INTO FRUIT_LOAD_LIST (FRUIT_NAME) VALUES ('"+new_fruit+"')") # great sql injection
 streamlit.write('You added ', new_fruit)
