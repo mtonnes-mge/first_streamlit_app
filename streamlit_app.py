@@ -54,8 +54,9 @@ def get_fruit_load_list():
 
 if streamlit.button("Get fruit load list"):
   my_cnx = get_cnx()
-  streamlit.dataframe(get_fruit_load_list())
+  fruits = get_fruit_load_list()
   my_cnx.close()
+  streamlit.dataframe(fruits)
 
 # input fruit
 def insert_fruit(fruit):
