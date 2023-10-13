@@ -47,7 +47,7 @@ my_data_row = my_cur.fetchone()
 streamlit.text("Snowflake context:")
 streamlit.text(my_data_row)
 
-my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.fruit_load_list")
+my_cur.execute('select * from "PC_RIVERY_DB"."PUBLIC"."FRUIT_LOAD_LIST"')
 my_data_row = my_cur.fetchone()
 streamlist.text("The fruit list:")
 streamlist.text(my_data_row)
